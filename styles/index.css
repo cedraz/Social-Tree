@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --body-bg-color: #FAF7FD;
+    --purple: #BB99DD;
+    --purple-darker: #b182e1;
+    --font-montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: var(--purple-darker);
+}
+
+body {
+    background: linear-gradient(297deg,var(--body-bg-color) 45%, var(--purple));
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font-montserrat);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-width: 360px;
+    margin: 0 auto;
+}
+
+.link__tree__container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.profile__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile__img {
+    width: 210px;
+    border-radius: 100%;
+    padding: 6px;
+    border: 3px solid var(--purple-darker);
+}
+
+.links__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.links__container a {
+    padding: 1rem 10rem;
+    border: 3px solid var(--purple-darker);
+    border-radius: 5px;
+}
+
+.icon__links__container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.icon__links__container a {
+    display: flex;
+}
+
+
+.discord__icon__clicked {
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+
+.discord__icon__clicked::before {
+    content: "Copied!";
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -28px;
+    bottom: -48px;
+    background-color: var(--purple);
+    color: black;
+    width: 80px;
+    height: 40px;
+    border-radius: 7px;
+    color: var(--body-bg-color);
+}
+
+.discord__icon__clicked::after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: -10px;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--purple); 
+}
+
+/* .icon__before__arrow {
+    position: relative;
+}
+
+.icon__before__arrow::before {
+
+} */
+
+@media (max-width: 500px) {
+    .profile__img {
+        width: 120px;
+    }
+
+    .links__container a {
+        padding: 0.8rem 7rem;
+    }
+}
+
+@media (max-height: 920px) {
+    .links__container {
+        margin-bottom: 5rem;
+    }
+}
+
+@media (max-height: 750px) {
+    .links__container {
+        margin-bottom: 3rem;
+    }
+}
